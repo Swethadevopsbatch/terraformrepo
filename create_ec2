@@ -1,0 +1,11 @@
+provider "aws" {
+region = "us-east-1"
+}
+resource "aws_instance" "ec2create" {
+ami = "ami-xxxxxxxxxxxxxxx"
+subnet_id = "subnet-xxxxxxxxxxxxx"
+instance_type = "t2.micro"
+associate_public_ip_address = "true"
+#vpc_security_group_ids = "sg-xxxxxxxxxxxx"
+key_name = "xxxxxx"
+}
